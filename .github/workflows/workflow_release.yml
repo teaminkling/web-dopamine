@@ -27,6 +27,13 @@ jobs:
       uses: rjstone/discord-webhook-notify@v1
       with:
         severity: info
-        description: "**## GHOST DEPLOYED ##** via _GitHub Action_ for repo: [teaminkling/web-dopamine]..."
-        details: "Deployed to Ghost successfully! Check the deployment at: [ https://inklinginteractive.com ]!"
+        details: "**## GHOST DEPLOYED SUCCESSFULLY ##**
+
+
+          - **Via:** _GitHub Action_ for repo: [teaminkling/web-dopamine]...
+
+          - **Result:** https://inklinginteractive.com
+
+
+          Results should appear shortly. Please refresh your cache if changes do not appear."
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
