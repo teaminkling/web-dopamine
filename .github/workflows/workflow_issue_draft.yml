@@ -1,0 +1,32 @@
+name: "Branch and Draft"
+on:
+  issues:
+    types: [assigned]
+
+# Create a new branch and WIP PR for every single assigned issue.
+
+jobs:
+  issue-branch:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create Issue Branch
+      uses: robvanderleek/create-issue-branch@v1.4
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  pull-request:
+    runs-on: ubuntu-latest
+    needs: issue-branch
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: pull-request
+      uses: repo-sync/pull-request@v2
+      with:
+        source_branch: "issue-${{ github.event.issue.number }}"
+        destination_branch: "main"
+        pr_title: "WIP: ${{ github.ref }} -> main (trunk), closes #${{ github.event.issue.number }}"
+        pr_template: ".github/pull_request_template.md"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        pr_draft: true
+        pr_allow_empty: true

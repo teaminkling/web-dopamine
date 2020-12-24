@@ -1,26 +1,26 @@
-# Dope
+# Dopamine
 
-A unique tag-based theme to arrange your publications into collections. Keep organized and let your readers explore your publications with ease. Completely free and fully responsive, released under the MIT license.
+A fork of the [Dope](https://dope.ghost.io) Ghost blogging theme for the Inkling Interactive marketing website.
 
-**Demo: https://dope.ghost.io**
+This is the original tagline:
 
-&nbsp;
+> A unique tag-based theme to arrange your publications into collections. Keep organized and let your readers explore
+> your publications with ease. Completely free and fully responsive, released under the MIT license.
 
-# Instructions
+# Installation
 
-1. [Download this theme](https://github.com/TryGhost/Dope/archive/master.zip)
-2. Log into Ghost, and go to the `Design` settings area to upload the zip file
+1. Download the repository as a `.zip` file.
+2. Log into Ghost, and go to the `Design` settings area to upload the zip file.
 
 # Development
 
-Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/),
+[Yarn](https://yarnpkg.com/) (or NPM) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's 
+root directory:
 
 ```bash
-# Install
-yarn
-
-# Run build & watch for changes
-$ yarn dev
+npm install
+npm run dev
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
@@ -33,7 +33,8 @@ yarn zip
 
 # PostCSS Features Used
 
-- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
+- **Autoprefixer**: Don't worry about writing browser prefixes of any kind, it's all done automatically with support for
+  the latest 2 major versions of every browser.
 
 # Copyright & License
 

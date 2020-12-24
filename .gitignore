@@ -1,28 +1,44 @@
-b-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
+# IDE and OS
 
-pids
-logs
-results
-
-npm-debug.log
-node_modules
-package-lock.json
-
-.idea/*
-*.iml
-projectFilesBackup
-
+.idea/
+.vscode/
 .DS_Store
 
-dist/
+# Environment
 
-config.json
-changelog.md
-changelog.md.bk
+dist/
+coverage/
+/target/
+
+## Python
+
+.env
+__pycache__/
+
+### Django
+
+*.sqlite3
+
+## JavaScript
+
+.nuxt/
+npm-debug.log
+node_modules/
+.nyc_output
+
+## Rust
+
+**/*.rs.bk
+
+## Remove/comment this line for executables:
+
+Cargo.lock
+
+## Godot
+
+.import/
+export.cfg
+export_presets.cfg
+*.translation
+.mono/
+data_*/
