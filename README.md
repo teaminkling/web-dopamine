@@ -44,6 +44,8 @@ api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
 
 You will get a new deployment every time you tag and push `v<semver>` e.g., `v1.2.3`.
 
+You should also set `DISCORD_WEBHOOK` to publish to a Discord channel.
+
 ## PostCSS Features Used
 
 - **Autoprefixer**: Don't worry about writing browser prefixes of any kind, it's all done automatically with support for

@@ -23,3 +23,9 @@ jobs:
         api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
         api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
         file: dist/dopamine.zip
+    - name: Deploy Notification
+      uses: rjstone/discord-webhook-notify@v1
+      with:
+        severity: success
+        details: Deployed to Ghost successfully!
+        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
