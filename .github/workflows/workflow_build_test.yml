@@ -14,7 +14,7 @@ jobs:
 
     # Version changing should not cause any changes to files.
 
-    - run: npm run version
+    - run: npm run ver
     - name: Check Changes
       uses: UnicornGlobal/has-changes-action@v1.0.11
     - name: Ensure Unchanged
