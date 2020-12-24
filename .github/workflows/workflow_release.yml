@@ -4,30 +4,23 @@ on:
     tags:
       - "v*"
 
-#
-# Perform the integration and deployment tasks. Usual candidates include:
-#
-# - Create and store packages/images to a registry.
-# - Deploy to a production environment.
-# - Create a blog post with the release notes.
-#
+# Release and update the Ghost app live.
 
 jobs:
-  integration:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-
-    #
-    # TODO
-    #
-
   deployment:
     runs-on: ubuntu-latest
     needs: integration
     steps:
     - uses: actions/checkout@v2
+    - run: npm install
 
-    #
-    # TODO
-    #
+    # Ensure the correct version in the package file.
+
+    - run: npm version from-git
+    - run: npm run zip
+    - name: Deploy Ghost Theme
+      uses: TryGhost/action-deploy-theme@v1.4.1
+      with:
+        api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+        api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+        file: dist/dopamine.zip

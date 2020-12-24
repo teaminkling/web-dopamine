@@ -1,17 +1,17 @@
 {
-    "name": "dope",
-    "description": "A Ghost theme",
-    "version": "1.0.0",
+    "name": "dopamine",
+    "description": "A Ghost theme, edited by Inkling Interactive.",
+    "version": "0.1.0",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
     },
     "license": "MIT",
-        "author": {
-            "name": "Ghost Foundation",
-            "email": "hello@ghost.org",
-            "url": "https://ghost.org"
-        },
+    "author": {
+        "name": "Ghost Foundation",
+        "email": "hello@ghost.org",
+        "url": "https://ghost.org"
+    },
     "keywords": [
         "ghost",
         "theme",
@@ -44,12 +44,15 @@
         "dev": "gulp",
         "test": "gscan .",
         "lint": "gulp lint",
-        "zip": "gulp zip"
+        "zip": "gulp zip",
+        "version": "npm version from-git"
     },
     "devDependencies": {
         "autoprefixer": "9.8.6",
         "beeper": "2.0.0",
+        "colorette": "^1.2.1",
         "cssnano": "4.1.10",
+        "gscan": "^3.6.1",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
