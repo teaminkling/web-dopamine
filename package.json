@@ -45,7 +45,7 @@
         "test": "gscan .",
         "lint": "gulp lint",
         "zip": "gulp zip",
-        "version": "npm version $(git describe --abbrev=0 --tags) --no-git-tag-version --allow-same-version"
+        "ver": "npm version $(git describe --abbrev=0 --tags) --no-git-tag-version --allow-same-version"
     },
     "devDependencies": {
         "autoprefixer": "9.8.6",

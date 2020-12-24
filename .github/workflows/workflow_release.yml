@@ -16,7 +16,7 @@ jobs:
 
     # Ensure the correct version in the package file.
 
-    - run: npm version from-git
+    - run: npm run ver
     - run: npm run zip
     - name: Deploy Ghost Theme
       uses: TryGhost/action-deploy-theme@v1.4.1
